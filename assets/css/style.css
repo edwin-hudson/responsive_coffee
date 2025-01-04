@@ -144,6 +144,7 @@ header .navbar{
 
 .navbar :where(#menu-close-button, #menu-open-button){
     display: none;
+    color: var(--primary-color);
 }
 
 
@@ -285,6 +286,7 @@ header .navbar{
 .menu-section{
     color: var(--white-color);
     background: var(--dark-color);
+    padding: 50px 0 100px;
 }
 
 .menu-section .menu-list{
@@ -307,6 +309,132 @@ header .navbar{
 .menu-section .menu-list .menu-item .menu-image{
     max-width: 83%;
     aspect-ratio: 1/1;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.menu-section .menu-list .menu-item .name{
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+
+.menu-section .menu-list .menu-item .text{
+    font-size: var(--font-size-m);
+}
+
+/* Testimonials section styling */
+.testimonials-section {
+    padding: 50px 0 100px;
+    background: var(--light-pink-color);
+}
+
+.testimonials-section .slider-wrapper{
+    overflow: hidden;
+    margin: 0 60px 50px;
+}
+
+.testimonials-section .testimonial{
+    display: flex;
+    padding: 35px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-section .testimonial .user-image{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    -webkit-border-radius: var(--border-radius-circle);
+    -moz-border-radius: var(--border-radius-circle);
+    -ms-border-radius: var(--border-radius-circle);
+    -o-border-radius: var(--border-radius-circle);
+    border-radius: var(--border-radius-circle);
+}
+
+.testimonials-section .testimonial .name{
+    margin-bottom: 16px;
+    font-size: var(--font-size-m);
+}
+
+.testimonials-section .testimonial .feedback{
+    line-height: 25px;
+}
+
+.testimonials-section .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+}
+
+.testimonials-section .swiper-slide-button{
+    margin-top: -50px;
+    color: var(--secondary-color);
+    -webkit-transform: 0.3s ease;
+    -moz-transform: 0.3s ease;
+    -ms-transform: 0.3s ease;
+    -o-transform: 0.3s ease;
+    transform: 0.3s ease;
+}
+
+.testimonials-section .swiper-slide-button:hover{
+    color: var(--primary-color);
+}
+
+/* Gallery section styling  */
+.gallery-section{
+    padding: 50px 0 100px;
+}
+
+.gallery-section .gallery-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.gallery-section .gallery-list .gallery-item{
+    overflow: hidden;
+    width: calc(100% /3 - 32px);
+    -webkit-border-radius: var(--border-radius-s);
+    -moz-border-radius: var(--border-radius-s);
+    -ms-border-radius: var(--border-radius-s);
+    -o-border-radius: var(--border-radius-s);
+    border-radius: var(--border-radius-s);
+}
+
+.gallery-section .gallery-item .gallery-image{
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.gallery-section .gallery-item:hover .gallery-image{
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+}
+
+
+/* Responsive media query code for max width 1024px  */
+@media screen and (max-width: 1024px){
+
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+
+    .menu-section .menu-list .menu-item{
+    width: calc(100% /3 - 60px);
+    }
 }
 
 
@@ -410,4 +538,47 @@ header .navbar{
         max-width: 250px;
         aspect-ratio: 1/1;
     }
+    
+    .menu-section .menu-list{
+        gap: 30px;
+    }
+
+    .menu-section .menu-list .menu-item{
+    width: calc(100% /2 - 30px);
+    }
+
+    .menu-section .menu-list .menu-item .menu-image{
+        max-width: 200px;
+    }
+
+    
+    .gallery-section .gallery-list{
+        gap: 30px;
+    }
+
+    .gallery-section .gallery-list .gallery-item{
+        width: calc(100% / 2 - 30px);
+    }
+}
+
+/* Responsive media query code for max width 640px  */
+@media screen and (max-width: 640px) {
+
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+
+    .menu-section .menu-list .menu-item,
+    .gallery-section .gallery-list .gallery-item{
+        width: 100%;
+    }
+
+    .testimonials-section .slider-wrapper{
+        margin: 0 0 30px;
+    }
+
+    .testimonials-section .swiper-slide-button{
+        display: none;
+    }
+
 }
